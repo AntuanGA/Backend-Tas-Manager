@@ -1,0 +1,26 @@
+# Task Manager API
+
+## Cómo correrlo:
+```bash
+pip install -r requirements.txt
+uvicorn app.main:app --reload
+```
+
+## User Endpoints
+- **POST /register**: Register a new user.
+- **POST /token**: Login and get an access token.
+
+## Task Endpoints
+- **POST /tasks/**: Create a new task.
+- **GET /tasks**: List tasks, optionally filtered by status.
+- **GET /tasks/{task_id}**: Get details of a specific task.
+- **DELETE /tasks/{task_id}**: Delete a specific task.
+- **PUT /tasks/{task_id}**: Update a specific task.
+- **PATCH /tasks/{task_id}/complete**: Mark a task as completed.
+
+## Admin Endpoints
+- **GET /admin/users**: View all users (admin only).
+- **GET /admin/tasks**: View all tasks in the system (admin only).
+- **DELETE /admin/users/{user_id}**: Delete a user (admin only).
+- **PATCH /admin/users/{user_id}/make-admin**: Assign admin role to a user (admin only).
+- **GET /admin/stats**: View system statistics (admin only).
